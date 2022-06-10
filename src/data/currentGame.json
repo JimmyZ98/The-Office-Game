@@ -1,0 +1,52 @@
+[
+    {
+        "id": "5e96689a6a66e65486e244aa",
+        "quote": "Sorry I annoyed you with my friendship.",
+        "options": [
+            "Andy Bernard",
+            "Michael Scott",
+            "Gabe Lewis",
+            "Oscar Martinez"
+        ]
+    },
+    {
+        "id": "5e9667db6a66e65486e244a3",
+        "quote": "I have a lot of questions. Number one, how dare you?",
+        "options": [
+            "Angela Martin",
+            "Oscar Martinez",
+            "Jim Halpert",
+            "Kelly Kapoor"
+        ]
+    },
+    {
+        "id": "5e9664cff87ac15464c55f1b",
+        "quote": "If I had a gun with two bullets and I was in a room with Hitler, Bin Laden, and Toby, I would shoot Toby twice.",
+        "options": [
+            "Stanley Hudson",
+            "Erin Hannon",
+            "Creed Bratton",
+            "Michael Scott"
+        ]
+    },
+    {
+        "id": "5e9665cd6a66e65486e24496",
+        "quote": "Well, Happy Birthday Jesus. Sorry your party’s so lame.",
+        "options": [
+            "Erin Hannon",
+            "Ryan Howard",
+            "Michael Scott",
+            "Stanley Hudson"
+        ]
+    },
+    {
+        "id": "5e9668dd6a66e65486e244ad",
+        "quote": "I have been Michael's #2 guy for about 5 years. And we make a great team. We're like one of those classic famous teams. He's like Mozart, and I'm like Mozart's friend. No. I'm like Butch Cassidy, and Michael is like Mozart. You try and hurt Mozart; you're going to get a bullet in your head courtesy of Butch Cassidy.",
+        "options": [
+            "Jim Halpert",
+            "Dwight Schrute",
+            "Andy Bernard",
+            "Angela Martin"
+        ]
+    }
+]

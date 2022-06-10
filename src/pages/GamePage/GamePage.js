@@ -3,37 +3,49 @@ import ClockCounter from "../../components/ClockCounter/ClockCounter";
 import Header from "../../components/Header/Header";
 import Options from "../../components/Options/Options";
 import Quote from "../../components/Quote/Quote";
-import sample from "../../data/sample.json";
+import questions from "../../data/currentGame.json";
 
 class GamePage extends Component {
   state = {
     timer: 10,
     score: "",
-    quote: "",
-    questions: [],
+    questionArr: [],
+    currentQuestion: "",
+    index: 0,
     options: [],
     answer: null,
   };
 
   // maybe a question counter state??
 
-  updateScore() {
-    this.setState({
-      score: "hello"
-    })
-  }
+  handleAnswerOptionClick = (e) => {
+    const nextQuestion = this.state.currentQuestion + 1;
+    if (nextQuestion < 5) {
+      this.setState({
+        setCurrentQuestion: nextQuestion,
+      });
+    }
+  };
 
   componentDidMount() {
-    const sampleArr = sample;
     this.setState({
-      questions: sampleArr,
-      quote: sampleArr[0],
-      options: ["Michael", "Pam", "Creed", "Kevin"],
+      currentQuestion: questions[0],
     });
+    this.interval = setInterval(() => {
+      if (this.state.timer > 0) {
+        this.setState(({ timer }) => ({
+          timer: timer - 0.5,
+        }));
+      }
+    }, 1000);
   }
 
-  componentDidUpdate(prevProps) {
-    console.log(this.props)
+  componentDidUpdate(prevState) {
+    if (prevState.index !== this.state.index && this.state.index !== 0) {
+      this.setState({
+        currentQuestion: questions[this.state.index],
+      });
+    }
   }
 
   render() {
@@ -41,8 +53,11 @@ class GamePage extends Component {
       <div className="wrapper">
         <Header />
         <ClockCounter timer={this.state.timer} score={this.state.score} />
-        <Quote quote={this.state.quote.content} />
-        <Options options={this.state.options} updateScore={this.updateScore} />
+        <Quote quote={this.state.currentQuestion?.quote || ""} />
+        <Options
+          options={this.state.currentQuestion?.options || ""}
+          handleAnswerOptionClick={this.handleAnswerOptionClick}
+        />
       </div>
     );
   }
