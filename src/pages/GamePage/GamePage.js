@@ -22,11 +22,7 @@ class GamePage extends Component {
   handleAnswerOptionClick = (e) => {
     if (this.state.index < 5) {
       this.setState({
-<<<<<<< HEAD
-        currentQuestion: nextQuestion,
-=======
         index: this.state.index + 1
->>>>>>> 6897506c6f6654a8a9f10188c13e2ad119620041
       });
     }
     axios.post(`http://localhost:8080/game/check${this.state.currentQuestion.id}`, {
