@@ -1,9 +1,9 @@
+import axios from "axios";
 import { Component } from "react";
 import ClockCounter from "../../components/ClockCounter/ClockCounter";
 import Header from "../../components/Header/Header";
 import Options from "../../components/Options/Options";
 import Quote from "../../components/Quote/Quote";
-import questions from "../../data/currentGame.json";
 
 class GamePage extends Component {
   state = {
@@ -19,18 +19,39 @@ class GamePage extends Component {
   // maybe a question counter state??
 
   handleAnswerOptionClick = (e) => {
-    const nextQuestion = this.state.currentQuestion + 1;
-    if (nextQuestion < 5) {
+    if (this.state.index < 5) {
       this.setState({
-        setCurrentQuestion: nextQuestion,
+        index: this.state.index + 1
       });
+    }
+    axios.post(`http://localhost:8080/game/check${this.state.currentQuestion.id}` ,{
+      answer: e.target.value
+    })
+    .then(res => {
+      this.setState({
+        score: res.data
+      })
+    })
+    .catch(err =>{
+      console.log(err)
+    })
+    if (this.state.index = 5) {
+      // input 5 and input name, leaderboard
+      // index = 0, return homepage
     }
   };
 
   componentDidMount() {
-    this.setState({
-      currentQuestion: questions[0],
-    });
+    axios.get('http://localhost:8080/game/start')
+    .then(res => {
+      this.setState({
+        questionArr: res.data,
+        currentQuestion: res.data[0]
+      })
+    })
+    .catch(err => {
+      console.error('could not download', err)
+    })
     this.interval = setInterval(() => {
       if (this.state.timer > 0) {
         this.setState(({ timer }) => ({
@@ -40,10 +61,10 @@ class GamePage extends Component {
     }, 1000);
   }
 
-  componentDidUpdate(prevState) {
+  componentDidUpdate(prevProps, prevState) {
     if (prevState.index !== this.state.index && this.state.index !== 0) {
       this.setState({
-        currentQuestion: questions[this.state.index],
+        currentQuestion: this.state.questionArr[this.state.index],
       });
     }
   }
