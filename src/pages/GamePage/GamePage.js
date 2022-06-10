@@ -10,7 +10,7 @@ class GamePage extends Component {
     timer: 10,
     score: "",
     questionArr: [],
-    currentQuestion: "",
+    currentQuestion: 0,
     index: 0,
     options: [],
     answer: null,
@@ -22,7 +22,7 @@ class GamePage extends Component {
     const nextQuestion = this.state.currentQuestion + 1;
     if (nextQuestion < 5) {
       this.setState({
-        setCurrentQuestion: nextQuestion,
+        currentQuestion: nextQuestion,
       });
     }
   };

@@ -10,7 +10,7 @@ function Options({ options, handleAnswerOptionClick }) {
             <input
               key={index}
               type="button"
-              onClick={handleAnswerOptionClick}
+              onClick={() => handleAnswerOptionClick()}
               value={option}
               placeholder={option}
             />
