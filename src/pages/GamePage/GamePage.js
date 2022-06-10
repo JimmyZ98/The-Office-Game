@@ -8,12 +8,20 @@ import sample from "../../data/sample.json";
 class GamePage extends Component {
   state = {
     timer: 10,
-    score: 0,
+    score: "",
     quote: "",
     questions: [],
     options: [],
     answer: null,
   };
+
+  // maybe a question counter state??
+
+  updateScore() {
+    this.setState({
+      score: "hello"
+    })
+  }
 
   componentDidMount() {
     const sampleArr = sample;
@@ -24,13 +32,17 @@ class GamePage extends Component {
     });
   }
 
+  componentDidUpdate(prevProps) {
+    console.log(this.props)
+  }
+
   render() {
     return (
       <div className="wrapper">
         <Header />
-        <ClockCounter />
+        <ClockCounter timer={this.state.timer} score={this.state.score} />
         <Quote quote={this.state.quote.content} />
-        <Options options={this.state.options} />
+        <Options options={this.state.options} updateScore={this.updateScore} />
       </div>
     );
   }

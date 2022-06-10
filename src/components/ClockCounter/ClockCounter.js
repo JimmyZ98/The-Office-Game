@@ -1,8 +1,10 @@
 import React from "react";
 import "./ClockCounter.scss";
 
-function ClockCounter() {
-  return <div>ClockCounter</div>;
+function ClockCounter({timer, score}) {
+  return (
+    <p>{score}</p>
+  )
 }
 
 export default ClockCounter;
