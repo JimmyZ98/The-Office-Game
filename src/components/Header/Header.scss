@@ -1,0 +1,14 @@
+.header {
+  &__nav {
+    display: flex;
+    width: 100%;
+  }
+  &__logo {
+    background-image: url("../../assets/images/office-logo.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 4rem;
+    width: 12rem;
+    display: flex;
+  }
+}
