@@ -1,14 +1,41 @@
 .header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   &__nav {
+    margin: 0 auto;
     display: flex;
-    width: 100%;
+    width: 25rem;
+    justify-content: space-between;
   }
   &__logo {
     background-image: url("../../assets/images/office-logo.jpg");
     background-size: cover;
     background-position: center;
-    height: 4rem;
+    height: 3.8rem;
     width: 12rem;
     display: flex;
+    border-radius: 5px;
+  }
+  &__logo:hover {
+    border-color: #f2e9e4;
+    box-shadow: 0 0 0.25em 0.025em#fde2e4;
+    transform: scale(1.025);
+    cursor: pointer;
+  }
+  &__leaderboard {
+    background-color: #f2e9e4;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__leaderboard:hover {
+    border-color: #f2e9e4;
+    box-shadow: 0 0 0.25em 0.025em#fde2e4;
+    transform: scale(1.025);
+    cursor: pointer;
   }
 }

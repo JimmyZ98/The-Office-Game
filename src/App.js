@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import GamePage from "./pages/GamePage/GamePage";

@@ -1,0 +1,27 @@
+.options {
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 20rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 10rem;
+  }
+  .options input {
+    background: none;
+    color: #f2e9e4;
+    border: 2px solid;
+    padding: 0.5em 1em;
+    transition: all 0.25s;
+    width: 10em;
+    border-radius: 0.3em;
+    margin: 0.75rem;
+  }
+  .options input:hover {
+    border-color: #fad2e1;
+    color: #fad2e1;
+    box-shadow: 0 0 0.5em 0.05em#fde2e4;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
