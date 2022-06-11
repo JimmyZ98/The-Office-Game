@@ -22,12 +22,12 @@ class LeaderboardPage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="leaderboard">
         <h1>LeaderboardPage</h1>
       <ol>
         {!this.state.leaderboard ? "" : 
         this.state.leaderboard.map(item => {
-          return <li key={item.id}>{item.name}</li>
+          return <li key={item.id}>{item.name} - {item.score} points</li>
         })}
       </ol>
       </div>
