@@ -4,8 +4,8 @@ import "./ClockCounter.scss";
 function ClockCounter({ timer, score }) {
   return (
     <>
-      <p>{timer}</p>
-      <p>{score}</p>
+      <p>Time left: {timer}</p>
+      <p>Score: {score}</p>
     </>
   );
 }

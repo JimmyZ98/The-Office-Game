@@ -9,7 +9,7 @@ import Quote from "../../components/Quote/Quote";
 class GamePage extends Component {
   state = {
     timer: 10,
-    score: "",
+    score: 0,
     questionArr: [],
     currentQuestion: 0,
     index: 0,
