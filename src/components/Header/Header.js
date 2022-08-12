@@ -7,6 +7,9 @@ function Header() {
     <header className="header">
       <div className="header__nav">
         <Link to="/" className="header__logo"></Link>
+        <Link to="/game" className="header__leaderboard">
+          Play
+        </Link>
         <Link to="/leaderboard" className="header__leaderboard">
           Leaderboard
         </Link>

@@ -30,8 +30,9 @@ class GamePage extends Component {
       timer: this.state.timer
     })
       .then(res => {
+        console.log(res.data)
         this.setState({
-          score: res.data,
+          score: this.state.score + res.data,
           timer: 10
         })
       })
@@ -75,7 +76,6 @@ class GamePage extends Component {
   render() {
     return (
       <div className="wrapper">
-        <Header />
         {this.state.index < 5 ?
           <div>
             <ClockCounter timer={this.state.timer} score={this.state.score} />

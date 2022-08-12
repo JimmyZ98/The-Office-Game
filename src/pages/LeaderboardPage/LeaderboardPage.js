@@ -23,7 +23,7 @@ class LeaderboardPage extends Component {
   render() {
     return (
       <div className="leaderboard">
-        <h1>LeaderboardPage</h1>
+        <h1>Leaderboard Page</h1>
       <ol>
         {!this.state.leaderboard ? "" : 
         this.state.leaderboard.map(item => {
