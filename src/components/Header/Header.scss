@@ -1,20 +1,20 @@
+@font-face {
+  font-family: 'slabserif';
+  src: url('../../assets/Fonts/theofficelogo.ttf');
+}
+
 .header {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  border-bottom: 1px solid #c9ada7;
   &__nav {
     margin: 0 auto;
+    width: 100%;
     display: flex;
-    width: 25rem;
+    align-items: baseline;
     justify-content: space-between;
   }
   &__logo {
-    background-image: url("../../assets/images/office-logo.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 3.8rem;
-    width: 12rem;
-    display: flex;
-    border-radius: 5px;
+    font-family: "slabserif";
+    margin: 1rem 0;
   }
   &__logo:hover {
     border-color: #f2e9e4;
@@ -22,15 +22,15 @@
     transform: scale(1.025);
     cursor: pointer;
   }
-  &__leaderboard {
-    background-color: #f2e9e4;
-    color: black;
-    border-radius: 5px;
-    font-weight: bold;
-    width: 12rem;
+  &__leaderboard-container {
+    width: 4rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+  }
+  &__leaderboard {
+    color: #f2e9e4;
+    font-weight: bold;
+    height: 2rem;
   }
   &__leaderboard:hover {
     border-color: #f2e9e4;
