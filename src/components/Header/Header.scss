@@ -5,36 +5,38 @@
 
 .header {
   border-bottom: 1px solid #c9ada7;
+  margin-bottom: 2rem;
   &__nav {
     margin: 0 auto;
     width: 100%;
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: center;
   }
   &__logo {
     font-family: "slabserif";
     margin: 1rem 0;
+    border: none;
   }
   &__logo:hover {
-    border-color: #f2e9e4;
-    box-shadow: 0 0 0.25em 0.025em#fde2e4;
     transform: scale(1.025);
     cursor: pointer;
   }
   &__leaderboard-container {
-    width: 4rem;
+    width: 5rem;
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
   }
   &__leaderboard {
     color: #f2e9e4;
     font-weight: bold;
     height: 2rem;
+    font-size: 1.25rem;
   }
   &__leaderboard:hover {
-    border-color: #f2e9e4;
-    box-shadow: 0 0 0.25em 0.025em#fde2e4;
     transform: scale(1.025);
     cursor: pointer;
   }

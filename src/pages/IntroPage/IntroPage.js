@@ -5,9 +5,8 @@ import "./IntroPage.scss";
 function IntroPage() {
   return (
     <div className="intro"> 
-    <div className="content-border">
       <div className="intro__rules rules">
-        <h2 className="rules__title">Rules</h2>
+        <h2 className="intro__title">Rules</h2>
         <p className="intro__rules-text">
           The objective of the game is to identify the character who made the
           quote!
@@ -20,7 +19,6 @@ function IntroPage() {
       <Link to="/game" className="intro__play">
         Play
       </Link>
-      </div>
     </div>
   );
 }

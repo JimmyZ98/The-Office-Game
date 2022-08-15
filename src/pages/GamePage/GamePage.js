@@ -5,6 +5,7 @@ import FinalScore from "../../components/FinalScore";
 import Header from "../../components/Header/Header";
 import Options from "../../components/Options/Options";
 import Quote from "../../components/Quote/Quote";
+import "./GamePage.scss"
 
 class GamePage extends Component {
   state = {
@@ -78,7 +79,7 @@ class GamePage extends Component {
     return (
       <div className="wrapper">
         {this.state.index < 5 ?
-          <div>
+          <div className="game">
             <ClockCounter timer={this.state.timer} score={this.state.score} />
             <Quote quote={this.state.currentQuestion?.quote || ""} />
             <Options

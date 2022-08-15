@@ -1,1 +1,16 @@
+.game{
+    max-width: 40rem;
+    margin: 0 auto;
 
+    &__quote{
+        line-height: 2rem;
+    }
+    &__time{
+        font-weight: bold;
+        color:#c9ada7;
+    }
+    &__score{
+        font-weight: bold;
+        color: #c9ada7;
+    }
+}
