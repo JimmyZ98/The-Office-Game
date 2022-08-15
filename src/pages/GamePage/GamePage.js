@@ -52,6 +52,7 @@ class GamePage extends Component {
           questionArr: res.data,
           currentQuestion: res.data[0]
         })
+        console.log("mounted")
       })
       .catch(err => {
         console.error('could not download', err)
