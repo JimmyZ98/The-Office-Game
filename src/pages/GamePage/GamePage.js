@@ -1,8 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 import ClockCounter from "../../components/ClockCounter/ClockCounter";
-import FinalScore from "../../components/FinalScore";
-import Header from "../../components/Header/Header";
+import LeaderboardInput from "../../components/LeaderboardInput/LeaderboardInput";
 import Options from "../../components/Options/Options";
 import Quote from "../../components/Quote/Quote";
 import "./GamePage.scss"
@@ -17,8 +16,6 @@ class GamePage extends Component {
     options: [],
     answer: null,
   };
-
-  // maybe a question counter state??
 
   handleAnswerOptionClick = (e) => {
     if (this.state.index < 5) {
@@ -40,10 +37,6 @@ class GamePage extends Component {
       .catch(err => {
         console.log(err)
       })
-    // if (this.state.index === 5) {
-      // input 5 and input name, leaderboard
-      // index = 0, return homepage
-    // }
   };
 
   componentDidMount() {
@@ -53,7 +46,6 @@ class GamePage extends Component {
           questionArr: res.data,
           currentQuestion: res.data[0]
         })
-        console.log("mounted")
       })
       .catch(err => {
         console.error('could not download', err)
@@ -88,7 +80,7 @@ class GamePage extends Component {
             />
           </div>
           :
-          <FinalScore score={this.state.score} />
+          <LeaderboardInput score={this.state.score} />
         }
       </div>
     );
