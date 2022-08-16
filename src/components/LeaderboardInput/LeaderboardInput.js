@@ -2,18 +2,19 @@ import win from '../../assets/images/win.gif'
 import lose from '../../assets/images/lose.gif'
 import axios from 'axios';
 import './LeaderboardInput.scss'
+import { useHistory } from "react-router-dom"
 
 function FinalScore({ score }) {
-    
-    function enterLeaderboard(e) {
+    const history = useHistory()
+    function enterLeaderboard(e,) {
         e.preventDefault()
         axios.post('http://localhost:8080/game/leaderboard', {
             name: e.target.name.value,
             score: score
         })
         .then(res => {
-            console.alert(`You're in the ${res.data} position of the leaderboard`)
-            this.props.history.push('/')
+            window.alert(`You're in the ${res.data} position of the leaderboard`)
+            history.push('/leaderboard')
         })
         .catch(err => {
             console.error(err)

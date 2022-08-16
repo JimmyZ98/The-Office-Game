@@ -33,11 +33,10 @@
   &__leaderboard {
     color: #f2e9e4;
     font-weight: bold;
-    height: 2rem;
     font-size: 1.25rem;
   }
   &__leaderboard:hover {
-    transform: scale(1.025);
+    transform: scale(1.075);
     cursor: pointer;
   }
 }
