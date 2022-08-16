@@ -1,6 +1,7 @@
 import win from '../assets/images/win.gif'
 import lose from '../assets/images/lose.gif'
 import axios from 'axios';
+import './LeaderboardInput.scss'
 
 function FinalScore({ score }) {
     
