@@ -1,6 +1,7 @@
-import win from '../assets/images/win.gif'
-import lose from '../assets/images/lose.gif'
+import win from "../../assets/images/win.gif"
+import lose from '../../assets/images/lose.gif'
 import axios from 'axios';
+import "./FinalScore.scss"
 
 function FinalScore({ score }) {
     

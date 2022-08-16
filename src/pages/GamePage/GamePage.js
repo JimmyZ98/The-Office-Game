@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 import ClockCounter from "../../components/ClockCounter/ClockCounter";
-import FinalScore from "../../components/FinalScore";
+import FinalScore from "../FinalScore/FinalScore";
 import Header from "../../components/Header/Header";
 import Options from "../../components/Options/Options";
 import Quote from "../../components/Quote/Quote";
