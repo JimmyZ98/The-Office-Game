@@ -1,11 +1,12 @@
-import win from '../assets/images/win.gif'
-import lose from '../assets/images/lose.gif'
+import win from '../../assets/images/win.gif'
+import lose from '../../assets/images/lose.gif'
 import axios from 'axios';
 import './LeaderboardInput.scss'
 
 function FinalScore({ score }) {
     
     function enterLeaderboard(e) {
+        e.preventDefault()
         axios.post('http://localhost:8080/game/leaderboard', {
             name: e.target.name.value,
             score: score
@@ -25,7 +26,7 @@ function FinalScore({ score }) {
             <p className='final-score__score'>FINAL SCORE: {score}</p>
             <form className='final-score__form' onSubmit={enterLeaderboard}>
                 <label className='final-score__label' htmlFor='name' >Enter your name to the leaderboard</label>
-                <input className='final-score__input' id='name' name='name' placeholder='Input name' />
+                <input className='final-score__input' id='name' name='name' placeholder='Michael Scott' />
                 <button className='final-score__button'>Join leaderboard</button>
             </form>
         </div>
