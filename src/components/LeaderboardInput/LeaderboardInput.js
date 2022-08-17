@@ -3,12 +3,13 @@ import lose from '../../assets/images/lose.gif'
 import axios from 'axios';
 import './LeaderboardInput.scss'
 import { useHistory } from "react-router-dom"
+import { url } from '../../data/serverUrl'
 
 function FinalScore({ score }) {
     const history = useHistory()
     function enterLeaderboard(e,) {
         e.preventDefault()
-        axios.post('http://localhost:8080/game/leaderboard', {
+        axios.post(`${url}/game/leaderboard`, {
             name: e.target.name.value,
             score: score
         })

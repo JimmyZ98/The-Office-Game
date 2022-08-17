@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 import "./LeaderboardPage.scss";
+import { url } from '../../data/serverUrl'
 
 class LeaderboardPage extends Component {
   state = {
@@ -8,7 +9,7 @@ class LeaderboardPage extends Component {
   };
 
   componentDidMount() {
-    axios.get('http://localhost:8080/game/leaderboard')
+    axios.get(`${url}/game/leaderboard`)
       .then(res => {
         this.setState({
           leaderboard: res.data

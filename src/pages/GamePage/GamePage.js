@@ -5,6 +5,7 @@ import LeaderboardInput from "../../components/LeaderboardInput/LeaderboardInput
 import Options from "../../components/Options/Options";
 import Quote from "../../components/Quote/Quote";
 import "./GamePage.scss"
+import { url } from '../../data/serverUrl'
 
 class GamePage extends Component {
   state = {
@@ -23,7 +24,7 @@ class GamePage extends Component {
         index: this.state.index + 1
       });
     }
-    axios.post(`http://localhost:8080/game/check${this.state.currentQuestion.id}`, {
+    axios.post(`${url}/game/check${this.state.currentQuestion.id}`, {
       answer: e.target.value,
       timer: this.state.timer
     })
@@ -40,7 +41,7 @@ class GamePage extends Component {
   };
 
   componentDidMount() {
-    axios.get('http://localhost:8080/game/start')
+    axios.get(`${url}/game/start`)
       .then(res => {
         this.setState({
           questionArr: res.data,
