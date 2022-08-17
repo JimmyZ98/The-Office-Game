@@ -24,12 +24,21 @@ class LeaderboardPage extends Component {
     return (
       <div className="leaderboard">
         <h1>Leaderboard</h1>
-      <ol>
-        {!this.state.leaderboard ? "" : 
-        this.state.leaderboard.map(item => {
-          return <li key={item.id}>{item.name} - {item.score} points</li>
-        })}
-      </ol>
+        <ul className='ranking'>
+          <li className='ranking__label'>
+            <span className='ranking__rank'>#</span>
+            <span className='ranking__name'>Name</span>
+            <span className='ranking__score'>Score</span>
+          </li>
+          {!this.state.leaderboard ? "" :
+            this.state.leaderboard.map((item, index) => {
+              return <li key={item.id} className='ranking__item'>
+                <span className='ranking__rank'>{index +1 }</span>
+                <span className='ranking__name'>{item.name}</span>
+                <span className='ranking__score'>{item.score}</span>
+              </li>
+            })}
+        </ul>
       </div>
     )
   }

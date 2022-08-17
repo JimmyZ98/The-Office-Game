@@ -4,3 +4,41 @@
     justify-content: center;
     align-items: center;
 }
+
+.ranking {
+    width: 18.75rem;
+    padding: 0;
+    margin: 1rem;
+
+    &__label {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5%;
+        font-weight: bold;
+        font-size: 1.25rem;
+        padding-bottom: 0.5rem;
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5%;
+        padding-bottom: 0.5rem;
+    }
+
+    &__rank {
+        width: 10%;
+    }
+
+    &__name {
+        width: 50%;
+    }
+
+    &__score {
+        width: 10%;
+    }
+}
