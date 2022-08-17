@@ -1,1 +1,1 @@
-export const url = 'https://deluxe-tapioca-937b90.netlify.app'
+export const url = 'https://office-trivia-server.herokuapp.com'

@@ -29,7 +29,6 @@ class GamePage extends Component {
       timer: this.state.timer
     })
       .then(res => {
-        console.log(res.data)
         this.setState({
           score: this.state.score + res.data,
           timer: 10

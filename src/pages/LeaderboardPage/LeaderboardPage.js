@@ -14,7 +14,6 @@ class LeaderboardPage extends Component {
         this.setState({
           leaderboard: res.data
         })
-        console.log(res.data)
       })
       .catch(err => {
         console.error(err)
