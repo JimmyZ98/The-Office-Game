@@ -6,6 +6,7 @@
 .header {
   border-bottom: 1px solid #c9ada7;
   margin-bottom: 2rem;
+
   &__nav {
     margin: 0 auto;
     width: 100%;
@@ -13,15 +14,18 @@
     align-items: baseline;
     justify-content: center;
   }
+
   &__logo {
     font-family: "slabserif";
     margin: 1rem 0;
     border: none;
   }
+
   &__logo:hover {
     transform: scale(1.025);
     cursor: pointer;
   }
+
   &__leaderboard-container {
     width: 5rem;
     display: flex;
@@ -30,11 +34,13 @@
     right: 1rem;
     top: 2rem;
   }
+
   &__leaderboard {
     color: #f2e9e4;
     font-weight: bold;
     font-size: 1.25rem;
   }
+
   &__leaderboard:hover {
     transform: scale(1.075);
     cursor: pointer;

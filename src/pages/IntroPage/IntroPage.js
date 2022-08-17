@@ -6,7 +6,7 @@ function IntroPage() {
   return (
     <div className="intro"> 
       <div className="intro__rules rules">
-        <h2 className="intro__title">The Office Quiz Game</h2>
+        <h2 className="intro__title">The Office Trivia Game</h2>
         <h3 className="intro__rules-title">Rules</h3>
         <p className="intro__rules-text">
           The objective of the game is to identify the character who said the
