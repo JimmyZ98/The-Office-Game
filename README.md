@@ -4,7 +4,7 @@ The trivia is based on the tv show The Office and leveraging [The Office API](ht
 
 Front-end repo: [The-Office-Game-API](https://github.com/estebanchos/the-office-game-api "The-Office-Game-API")
 
-![Demo screenshot](/app-screenshot 15.50.03.png)
+![Demo screenshot](/app-screenshot)
 
 ## About The Project 
 * **The Challenge:** Our educators challenged us to build a full stack app in 24h. The app had to either use a third-party API, or we had to make our own API.
