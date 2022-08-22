@@ -2,7 +2,7 @@
 Turntables is a trivia game built in a 24h hackathon at BrainStations software development bootcamp by [Carlos Ocampo](https://github.com/estebanchos/estebanchos "Carlos Ocampo") and [Jimmy Zhen](https://github.com/JimmyZ98 "Jimmy Zhen"). 
 The trivia is based on the tv show The Office and leveraging [The Office API](https://www.officeapi.dev "The Office API"). 
 
-Front-end repo: [The-Office-Game-API](https://github.com/estebanchos/the-office-game-api "The-Office-Game-API")
+Back-end repo: [The-Office-Game-API](https://github.com/estebanchos/the-office-game-api "The-Office-Game-API")
 
 ![Demo screenshot](/app-screenshot.png)
 
